@@ -1,44 +1,27 @@
-# FileOrganizer
+# File Organizer
 
-_TODO: one line on what this project does and who it's for._
+A **tool that automatically tidies messy folders** by sorting files into
+subfolders by type and/or date. Available both as a command-line script and as
+a modern Tkinter desktop GUI, with a preview step so you can see the plan before
+anything moves.
 
-**Stack:** Python
+## Features
+- Sort by file type and/or creation/modification date
+- **Dry-run / preview** before moving anything
+- Modern dark-themed GUI (several iterations) + a CLI core
+- Date detection, configurable rules (`config.yaml`)
+- Simple stats & charts of what was organized (pandas/matplotlib)
+
+## Stack
+Python · Tkinter · Pillow · pandas · matplotlib
 
 ## Getting started
-
 ```bash
 pip install -r requirements.txt
-python <entry>.py
-```
-
-## Dependencies
-
-- `tkinter  # Usually included with Python`
-- `Pillow>=9.0.0`
-- `pandas>=1.3.0  # For statistics`
-- `matplotlib>=3.4.0  # For charts`
-
-## Project structure
-
-```
-FileOrganizer.py
-FileOrganizerGui.py
-FileOrganizerGuiModern.py
-FileOrganizerGuiModernV2.py
-FileOrganizerGuiModernV3.py
-config.yaml
-dark_theme.py
-date_detector.py
-preview_organizer.py
-push_to_github.sh
-requirements.txt
-styles.py
+python FileOrganizerGuiModernV3.py     # GUI (latest)
+# or, command line:
+python FileOrganizer.py --help
 ```
 
 ## Notes
-
-_TODO: anything a new user should know — configuration, env vars, known limitations._
-
----
-
-_README scaffolded by readme_gen. Edit the TODOs to finish it._
+- Use dry-run first on important folders. Rules are editable in `config.yaml`.
